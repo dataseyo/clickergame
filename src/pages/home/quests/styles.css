@@ -1,16 +1,11 @@
-.upgrades-container {
+.quests-container {
     display: flex;
     flex-direction: column;
     flex: 1;
     border: 1px solid white;
-
 }
 
-.upgrades-title {
+.quests-title {
     color: white;
     padding: 10px;
-}
-
-.upgrades-text {
-    color: white;
 }

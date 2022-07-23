@@ -3,8 +3,13 @@
     flex-direction: row;
     position: sticky;
     top: 0;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: row;
 }
 
 .navbar-item {

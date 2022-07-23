@@ -8,16 +8,18 @@ const Navbar = () => {
   return (
     <header className='navbar-container'>
         <h2 className='navbar-title'>Idle Game</h2>
-        <div className='navbar-item'>
-            <p className='navbar-text'>Stats</p>
-            <FontAwesomeIcon icon={faChartColumn} className='navbar-icon'/>
-        </div>
 
-        <div className='navbar-item'>
-            <p className='navbar-text'>Info</p>
-            <FontAwesomeIcon icon={faCircleInfo} className='navbar-icon'/>
+        <div className='nav-menu'>
+            <div className='navbar-item'>
+                <p className='navbar-text'>Stats</p>
+                <FontAwesomeIcon icon={faChartColumn} className='navbar-icon'/>
+            </div>
+
+            <div className='navbar-item'>
+                <p className='navbar-text'>Info</p>
+                <FontAwesomeIcon icon={faCircleInfo} className='navbar-icon'/>
+            </div>
         </div>
-        
     </header>
   )
 }

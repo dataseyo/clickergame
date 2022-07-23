@@ -3,4 +3,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex: 2;
+}
+
+.game-clickable-area {
+    border: 1px solid white;
+    margin: 4px;
+}
+
+.sprite {
+    overflow-x: hidden;
 }

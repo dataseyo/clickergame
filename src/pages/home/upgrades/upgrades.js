@@ -4,7 +4,9 @@ import './styles.css'
 
 const Upgrades = () => {
   return (
-    <div>Upgrades</div>
+    <div className='upgrades-container'>
+        <h2 className='upgrades-title'>Upgrades</h2>
+    </div>
   )
 }
 
