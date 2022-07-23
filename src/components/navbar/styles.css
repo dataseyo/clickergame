@@ -1,0 +1,29 @@
+.navbar-container {
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px;
+}
+
+.navbar-title {
+    color: white;
+    padding: 8px;
+}
+
+.navbar-icon {
+    color: white;
+    padding: 8px;
+}
+
+.navbar-text {
+    color: white;
+}
