@@ -3,6 +3,7 @@
     flex-direction: column;
     border: 1px solid white;
     margin: 8px;
+    max-width: 400px;
 }
 
 .collapsable-div-header {
@@ -27,5 +28,4 @@
 }
 
 .collapsable-div {
-
 }

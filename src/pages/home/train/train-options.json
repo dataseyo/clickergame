@@ -1,0 +1,36 @@
+{
+    "workout" : {
+        "outcomes" : [
+            {
+                "id" : 1,
+                "text" : "You make dumbells out of wood and coconuts. +1 to strength.",
+                "weight": 7,
+                "strength_change" : 2
+            },
+            {
+                "id" : 2,
+                "text" : "Your muscles need rest. Take a break! -1 to strength.",
+                "weight": 1,
+                "strength_change" : -1
+            }
+        ]
+    },
+
+    "study" : {
+        "outcomes" : [
+            
+        ]
+    },
+
+    "Adventure" : {
+        "outcomes" : [
+            
+        ]
+    }, 
+
+    "???" : {
+        "outcomes" : [
+            
+        ]
+    }
+}

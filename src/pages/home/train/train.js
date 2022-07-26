@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 
 import './styles.css'
+import trainData from "./train-options.json"
 
 const Train = (props) => {
   return (
@@ -9,11 +10,11 @@ const Train = (props) => {
         <button className='train-button'>Workout</button>
         <button className='train-button'>Study</button>
         <button className='train-button'>Adventure</button>
-        <button className='train-button'>Craft Spell</button>
+        <button className='train-button'>???</button>
       </div>
 
       <div className className='train-outcome-container'>
-        <p className='train-text'>outcome</p>
+        <p className='train-text'>{JSON.stringify(trainData.workout.outcomes[0].text)}</p>
       </div>
     </div>
   )

@@ -1,8 +1,9 @@
 .train-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     border: 1px solid white;
     justify-content: space-between;
+    align-items: center;
 }
 
 .train-buttons-container {
@@ -10,6 +11,7 @@
     grid-template-columns: 120px 120px;
     gap: 2px;
     padding: 4px;
+    height: 100px;
 }
 
 .train-button {
@@ -59,11 +61,14 @@
 }
 
 .train-outcome-container {
+    align-items: flex-start;
     padding: 4px;
 }
 
 .train-text {
+    align-items: flex-start;
     color: white;
+    text-align: start;
 }
 
 

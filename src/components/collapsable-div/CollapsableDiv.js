@@ -20,7 +20,7 @@ const CollapsableDiv = ({title, children}) => {
 
       {show ? 
         <div className='collapsable-div'>
-          <p className='collapsable-div-text'>{children}</p>
+          {children}
         </div>
         :
         null

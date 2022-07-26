@@ -30,7 +30,7 @@ function App() {
         <div className="App">
           <Navbar openInfo={openInfo} setOpenInfo={setOpenInfo} openStats={openStats} setOpenStats={setOpenStats}/>
           <Routes>
-            <Route path="/" element={<Home stats={stats} setStats={setStats}/>} />
+            <Route path="/clickergame" element={<Home stats={stats} setStats={setStats}/>} />
             <Route path="/stats" element={<Stats stats={stats} setStats={setStats}/>} />
           </Routes>
         </div>
