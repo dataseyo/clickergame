@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/clicker/static/css/main.bb8ca951.css",
-    "main.js": "/clicker/static/js/main.50fc546d.js",
-    "static/js/787.c515f14b.chunk.js": "/clicker/static/js/787.c515f14b.chunk.js",
-    "index.html": "/clicker/index.html",
-    "main.bb8ca951.css.map": "/clicker/static/css/main.bb8ca951.css.map",
-    "main.50fc546d.js.map": "/clicker/static/js/main.50fc546d.js.map",
-    "787.c515f14b.chunk.js.map": "/clicker/static/js/787.c515f14b.chunk.js.map"
+    "main.css": "/clickergame/static/css/main.bb8ca951.css",
+    "main.js": "/clickergame/static/js/main.c1ebb440.js",
+    "static/js/787.c515f14b.chunk.js": "/clickergame/static/js/787.c515f14b.chunk.js",
+    "index.html": "/clickergame/index.html",
+    "main.bb8ca951.css.map": "/clickergame/static/css/main.bb8ca951.css.map",
+    "main.c1ebb440.js.map": "/clickergame/static/js/main.c1ebb440.js.map",
+    "787.c515f14b.chunk.js.map": "/clickergame/static/js/787.c515f14b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bb8ca951.css",
-    "static/js/main.50fc546d.js"
+    "static/js/main.c1ebb440.js"
   ]
 }
