@@ -10,6 +10,13 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: space-between;
+    flex: 3;
+}
+
+.home-sub-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    flex: 2;
 }
 
 .breakpoint-medium {

@@ -31,9 +31,13 @@ const Home = ({stats, setStats}) => {
       {/* desktop */}
       <Breakpoint medium up className='breakpoint-medium'>
         <div className='home-desktop'>
-          <Quests />
+          
           <Game setStats={setStats}/>
-          <Upgrades />
+          <div className='home-sub-container'>
+            <CollapsableDiv title={"Train"} children={<Train/>}/>
+            <CollapsableDiv title={"Quests"} children={<Quests/>}/>
+            <CollapsableDiv title={"Upgrades"} children={<Upgrades/>} />
+          </div>
         </div>
       </Breakpoint>
 
