@@ -3,22 +3,64 @@ import { SpriteAnimator } from 'react-sprite-animator'
 
 import './styles.css'
 import StatScreen from './stat-screen/StatScreen'
-import Upgrades from '../upgrades/upgrades'
+import Parallax from './parallax/parallax'
 import hero from '../../../assets/hero.png'
 import attack from '../../../assets/attack.png'
+import Resources from './resources/resources'
+import PlusGenerator from './plus-generator/PlusGenerator'
 
 const Game = ({setStats}) => {
+    // resource state
+    const [knowledge, setKnowledge] = useState(100)
+    const [stamina, setStamina] = useState(100)
+
+    // attack and animation state
     const [clicked, setClicked] = useState(false)
 
+    const [plusses, setPlusses] = useState([])
+
     const clickAnimation = () => {
+        const now = Date.now()
+        const newPlus = generatePlus()
+        
+        const filteredPlusses = plusses.filter(plus => {
+            const delta = now - newPlus.time
+            return delta < 1000;
+        })
+
+        filteredPlusses.push(newPlus)
+
+        setPlusses(filteredPlusses)
+        
+        // animate game character
         console.log("attack")
         setClicked(true)
         setTimeout(() => setClicked(false), 300)
     }
 
+    const generatePlus = () => {
+        return {
+            time: Date.now(),
+            style: {
+                top: `${Math.floor(Math.random() * (0 - 100))}%`,
+                left: `${Math.floor(Math.random() * (0 - 100))}%`,
+                zIndex: 2
+            },
+        }
+    }
+    
+    const PlusInstance = ({style}) => {
+        return (
+            <p className={`plus`}>+1</p>
+        )
+    }
+
   return (
     <div className='game-container'>
         <div className='game-clickable-area' onClick={() => clickAnimation()}>
+            {/* <Parallax /> */}
+            <StatScreen/>
+            <Resources />
             <SpriteAnimator
                 width={200}
                 height={190}
@@ -31,8 +73,9 @@ const Game = ({setStats}) => {
                 //reset={!animate}
                 className='sprite'
             />
+            <PlusGenerator generatePlus={generatePlus} PlusInstance={PlusInstance} setPlusses={setPlusses}>
+            </PlusGenerator>
         </div>
-        <StatScreen/>
     </div>
   )
 }

@@ -1,0 +1,32 @@
+.resources-container {
+    position: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.stamina {
+    background-color: green;
+    height: 18px;
+    width: 300px;
+    border-radius: 5px;
+    margin-bottom: 3px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.knowledge {
+    background-color: blue;
+    height: 18px;
+    width: 300px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.resources-text {
+    color: white;
+    align-self: center;
+}

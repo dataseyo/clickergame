@@ -3,9 +3,20 @@
     flex-direction: column;
     flex: 1;
     border: 1px solid white;
+    overflow-y: auto;
+    z-index: 1;
+    max-height: 150px;
 }
+
+@media screen and (min-width: 768px) {
+    .quests-container {
+        max-height: 100%;
+    }
+}
+
 
 .quests-title {
     color: white;
     padding: 10px;
 }
+

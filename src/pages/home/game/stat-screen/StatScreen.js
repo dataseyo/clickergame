@@ -8,8 +8,6 @@ import StatsContext from '../../../../context/StatsContext'
 const StatScreen = () => {
     const userStats = useContext(StatsContext)
 
-    
-
   return (
     <div className='stat-screen-container'>
         <div className='stat-screen-stat'>

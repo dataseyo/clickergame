@@ -1,0 +1,31 @@
+.collapsable-div-container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    margin: 8px;
+}
+
+.collapsable-div-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+.collapsable-div-title {
+    padding: 4px;
+}
+
+.collapsable-div-text {
+    color: white;
+}
+
+.collapsable-div-icon {
+    padding: 4px;
+    user-select: none;
+}
+
+.collapsable-div {
+
+}

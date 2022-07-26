@@ -3,10 +3,19 @@
     flex-direction: column;
     flex: 1;
     border: 1px solid white;
+    overflow-y: auto;
+    z-index: 1;
+    max-height: 150px;
+}
 
+@media screen and (min-width: 768px) {
+    .upgrades-container {
+        max-height: 100%;
+    }
 }
 
 .upgrades-title {
+
     color: white;
     padding: 10px;
 }

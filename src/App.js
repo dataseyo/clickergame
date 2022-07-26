@@ -17,11 +17,18 @@ function App() {
     level: 1
   })
 
+  // info modal state
+  const [openInfo, setOpenInfo] = useState(false)
+
+  // stats modal state
+  const [openStats, setOpenStats] = useState(false)
+  
+
   return (
     <StatsContext.Provider value={stats}>
       <BreakpointProvider>
-        <div className="App">2
-          <Navbar />
+        <div className="App">
+          <Navbar openInfo={openInfo} setOpenInfo={setOpenInfo} openStats={openStats} setOpenStats={setOpenStats}/>
           <Routes>
             <Route path="/" element={<Home stats={stats} setStats={setStats}/>} />
             <Route path="/stats" element={<Stats stats={stats} setStats={setStats}/>} />

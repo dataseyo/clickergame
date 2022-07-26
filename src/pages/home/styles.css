@@ -8,8 +8,10 @@
 .home-desktop {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: space-between;
 }
 
-.home-mobile {
-
+.breakpoint-medium {
+    width: 100vw;
 }

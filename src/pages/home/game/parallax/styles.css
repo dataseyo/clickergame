@@ -1,0 +1,38 @@
+.parallax-container {
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    margin: 0 auto;
+    z-index: -1;
+}
+
+.parallax-container div {
+    height: 400px;
+    min-width: 300px;
+    margin-left: 20px;
+    z-index: -1;
+}
+
+.building-1 {
+    background-color: green;
+    animation: slide 1s linear 1s infinite;
+
+}
+
+.building-2 {
+    background-color: blue;
+    animation: slide 11s linear 1s infinite;
+
+
+}
+
+.building-3 {
+    background-color: yellow;
+    animation: slide 11s linear 1s infinite;
+
+}
+
+@keyframes slide {
+    from { left: -30%; }
+    to { left: 100% }
+}

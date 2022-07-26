@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChartColumn, faCircleInfo } from '@fortawesome/free-solid-svg-icons'
 
 import './styles.css'
+import InfoModal from './nav-modals/InfoModal'
+import StatsModal from './nav-modals/StatsModal'
 
-const Navbar = () => {
+const Navbar = ({openInfo, setOpenInfo, openStats, setOpenStats}) => {
   return (
     <header className='navbar-container'>
         <h2 className='navbar-title'>Idle Game</h2>

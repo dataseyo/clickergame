@@ -1,14 +1,18 @@
 .game-container {
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex: 2;
+
+    flex: 3;
+    z-index: 10;
+    overflow: hidden;
 }
 
 .game-clickable-area {
     border: 1px solid white;
     margin: 4px;
+    align-items: center;
+    justify-content: center;
 }
 
 .sprite {

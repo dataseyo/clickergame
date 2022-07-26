@@ -1,17 +1,11 @@
 import React, { useState } from 'react'
-import { BottomNavigation, BottomNavigationAction, Drawer } from '@mui/material'
+import { BottomNavigation, BottomNavigationAction, AppBar } from '@mui/material'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookOpen } from '@fortawesome/free-solid-svg-icons'
 
 import './styles.css'
 
-const MobileMenu = () => {
-    const [value, setValue] = useState(0)
-
-    const onChange = (event, newVal) => {
-        setValue(newVal)
-    }
-
+const MobileMenu = ({value, onChange}) => {
   return (
     <footer className='mobile-menu-container'>
         <BottomNavigation
@@ -23,7 +17,8 @@ const MobileMenu = () => {
                 bottom: 0,
                 left: 0,
                 width: '100%',
-                backgroundColor: 'black'
+                backgroundColor: 'black',
+                zIndex: 1,
                 }}
         >
             <BottomNavigationAction 
