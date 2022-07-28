@@ -1,0 +1,23 @@
+.canvas {
+    width: 200px;
+    height: 200px;
+    border: 1px solid white;
+}
+
+.spritesheet {
+    animation: moveSpritesheet 1s steps(8) infinite;
+    width: 1600px;
+    position: absolute;
+    scale: 8;
+ }
+
+@keyframes moveSpritesheet {
+    from {
+       transform: translate3d(0px,0,0)
+    }
+    to {
+       transform: translate3d(20px,0,0)
+    }
+ }
+ 
+ 

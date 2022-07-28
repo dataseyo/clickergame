@@ -1,7 +1,6 @@
 .navbar-container {
     display: flex;
     flex-direction: row;
-    position: sticky;
     top: 0;
     justify-content: space-between;
     align-items: center;
@@ -30,6 +29,23 @@
     padding: 8px;
 }
 
+.navbar-icon-open {
+    color: blue;
+    animation: open .3s;
+}
+
 .navbar-text {
     color: white;
+}
+
+.navbar-text-open {
+    color: blue;
+    animation: open .3s;
+}
+
+@keyframes open {
+    100% {
+        scale: 1.1;
+        color: blue;
+    }
 }

@@ -4,13 +4,13 @@
             {
                 "id" : 1,
                 "text" : "You make dumbells out of wood and coconuts. +1 to strength.",
-                "weight": 7,
+                "weight": 8,
                 "strength_change" : 2
             },
             {
                 "id" : 2,
-                "text" : "Your muscles need rest. Take a break! -1 to strength.",
-                "weight": 3,
+                "text" : "Your muscles need rest. Take a break! +0 to strength.",
+                "weight": 2,
                 "strength_change" : -1
             },
             {

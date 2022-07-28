@@ -20,10 +20,18 @@ function App() {
     level: 1
   })
 
+  const [attack, setAttack] = useState(Math.floor((stats.strength/10 + stats.magic/10) * stats.level)
+  )
+
+  console.log(attack)
+
   const [resources, setResources] = useLocalStorage('resources', {
     stamina: 100,
     mana: 100
   })
+
+  // bestiary modal state
+  const [openBestiary, setOpenBestiary] = useState(false)
 
   // info modal state
   const [openInfo, setOpenInfo] = useState(false)
@@ -43,6 +51,7 @@ function App() {
             openInfo={openInfo} setOpenInfo={setOpenInfo} 
             openStats={openStats} setOpenStats={setOpenStats}
             openSettings={openSettings} setOpenSettings={setOpenSettings}
+            openBestiary={openBestiary} setOpenBestiary={setOpenBestiary}
           />
           <Routes>
             <Route 
@@ -53,6 +62,7 @@ function App() {
                   openInfo={openInfo} setOpenInfo={setOpenInfo} 
                   openStats={openStats} setOpenStats={setOpenStats}
                   openSettings={openSettings} setOpenSettings={setOpenSettings}
+                  openBestiary={openBestiary} setOpenBestiary={setOpenBestiary}
               />} 
             />
             <Route 

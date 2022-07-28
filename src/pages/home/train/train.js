@@ -38,7 +38,7 @@ const Train = ({setResources, setStats}) => {
     // const questionOutcomes = trainData.question.outcomes
 
     if (event.target.name === 'workout') {
-      if (stamina > 0) {
+      if (stamina >= 10) {
         //  select outcome from train data and set outcome state
         var selectedOutcome = weightedChoice(workoutOutcomes)
         setOutcome(selectedOutcome)
@@ -58,7 +58,7 @@ const Train = ({setResources, setStats}) => {
         console.log("stamina too low")
       }
     } else if (event.target.name === 'study') {
-      if (mana > 0) {
+      if (mana >=10) {
         //  select outcome from train data and set outcome state
         var selectedOutcome = weightedChoice(studyOutcomes)
         setOutcome(selectedOutcome)
@@ -78,7 +78,7 @@ const Train = ({setResources, setStats}) => {
         console.log("mana too low")
       }
     } else if (event.target.name === 'adventure') {
-      if (stamina > 0) {
+      if (stamina >= 10) {
 
       } else {
         console.log("stamina too low")

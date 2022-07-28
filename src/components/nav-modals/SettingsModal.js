@@ -16,7 +16,13 @@ const SettingsModal = ({openSettings, setOpenSettings}) => {
        >
            <div className='settings-modal'>
                <h3>Settings</h3>
-               <button onClick={() => reset()}>Reset Game</button>
+               <hr/>
+               <button 
+                    onClick={() => reset()}
+                    className='settings-button'
+                >
+                    Reset Game
+                </button>
            </div>
        </Modal>
   )

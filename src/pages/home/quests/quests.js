@@ -6,7 +6,6 @@ import QuestButtons from './quest-buttons/QuestButtons'
 const Quests = () => {
   return (
     <div className='quests-container'>
-        <h2 className='quests-title'>Quests</h2>
         <ul>
           <li className='quests-title'>Quest 1</li>
           <li className='quests-title'>Quest 2</li>

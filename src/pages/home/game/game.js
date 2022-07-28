@@ -8,8 +8,12 @@ import hero from '../../../assets/hero.png'
 import attack from '../../../assets/attack.png'
 import Resources from './resources/resources'
 import PlusGenerator from './plus-generator/PlusGenerator'
+import Sprite from '../../../components/sprite-animator/SpriteAnimator'
 
 const Game = ({setStats, setResources}) => {
+    // sprite state
+    const [sprite, setSprite] = useState(hero)
+
     // resource state
     const [knowledge, setKnowledge] = useState(100)
     const [stamina, setStamina] = useState(100)
@@ -34,8 +38,8 @@ const Game = ({setStats, setResources}) => {
         
         // animate game character
         console.log("attack")
-        setClicked(true)
-        setTimeout(() => setClicked(false), 300)
+        setSprite(attack)
+        // setTimeout(() => setClicked(false), 300)
     }
 
     const generatePlus = () => {
@@ -49,11 +53,11 @@ const Game = ({setStats, setResources}) => {
         }
     }
     
-    const PlusInstance = ({style}) => {
-        return (
-            <p className={`plus`}>+1</p>
-        )
-    }
+    // const PlusInstance = ({style}) => {
+    //     return (
+    //         <p className={`plus`}>+1</p>
+    //     )
+    // }
 
   return (
     <div className='game-container'>
@@ -64,17 +68,20 @@ const Game = ({setStats, setResources}) => {
             <SpriteAnimator
                 width={200}
                 height={190}
-                sprite={clicked ? attack : hero}
+                sprite={sprite}
                 shouldAnimate={true}
                 fps={10}
                 startFrame={0}
                 scale={.5}
-                //stopLastFrame={true}
+                stopLastFrame={sprite === attack ? true : false}
                 //reset={!animate}
                 className='sprite'
+                onEnd={() => setSprite(hero)}
             />
-            <PlusGenerator generatePlus={generatePlus} PlusInstance={PlusInstance} setPlusses={setPlusses}>
-            </PlusGenerator>
+
+            {/* <Sprite /> */}
+            {/* <PlusGenerator generatePlus={generatePlus} PlusInstance={PlusInstance} setPlusses={setPlusses}>
+            </PlusGenerator> */}
         </div>
     </div>
   )

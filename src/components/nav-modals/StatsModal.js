@@ -13,6 +13,7 @@ const StatsModal = ({openStats, setOpenStats}) => {
     >
       <div className='stats-modal'>
         <h3>Stats</h3>
+        <hr/>
       </div>
     </Modal>
   )

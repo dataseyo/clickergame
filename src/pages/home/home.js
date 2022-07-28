@@ -12,8 +12,9 @@ import CollapsableDiv from '../../components/collapsable-div/CollapsableDiv'
 import StatsModal from '../../components/nav-modals/StatsModal'
 import InfoModal from '../../components/nav-modals/InfoModal'
 import SettingsModal from '../../components/nav-modals/SettingsModal'
+import BestiaryModal from '../../components/nav-modals/BestiaryModal'
 
-const Home = ({setStats, setResources, openInfo, setOpenInfo, openStats, setOpenStats, openSettings, setOpenSettings}) => {
+const Home = ({setStats, setResources, openInfo, setOpenInfo, openStats, setOpenStats, openSettings, setOpenSettings, openBestiary, setOpenBestiary}) => {
   // consume stats context and destructure the variables
   const userStats = useContext(StatsContext)
   const {health, strength, magic, experience, level} = userStats
@@ -40,6 +41,10 @@ const Home = ({setStats, setResources, openInfo, setOpenInfo, openStats, setOpen
             <CollapsableDiv title={"Train"} children={<Train setResources={setResources} setStats={setStats}/>}/>
             <CollapsableDiv title={"Quests"} children={<Quests/>}/>
             <CollapsableDiv title={"Upgrades"} children={<Upgrades/>} />
+            <InfoModal openInfo={openInfo} setOpenInfo={setOpenInfo} />
+            <StatsModal openStats={openStats} setOpenStats={setOpenStats}/>
+            <SettingsModal openSettings={openSettings} setOpenSettings={setOpenSettings}/>
+            <BestiaryModal openBestiary={openBestiary} setOpenBestiary={setOpenBestiary}/>
           </div>
         </div>
       </Breakpoint>
@@ -51,8 +56,9 @@ const Home = ({setStats, setResources, openInfo, setOpenInfo, openStats, setOpen
         <CollapsableDiv title={"Quests"} children={<Quests/>}/>
         <CollapsableDiv title={"Upgrades"} children={<Upgrades/>} />
         <InfoModal openInfo={openInfo} setOpenInfo={setOpenInfo} />
-      <StatsModal openStats={openStats} setOpenStats={setOpenStats}/>
-      <SettingsModal openSettings={openSettings} setOpenSettings={setOpenSettings}/>
+        <StatsModal openStats={openStats} setOpenStats={setOpenStats}/>
+        <SettingsModal openSettings={openSettings} setOpenSettings={setOpenSettings}/>
+        <BestiaryModal openBestiary={openBestiary} setOpenBestiary={setOpenBestiary}/>
       </Breakpoint>
 
    

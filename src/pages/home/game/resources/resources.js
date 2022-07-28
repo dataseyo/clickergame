@@ -23,7 +23,7 @@ const Resources = ({setResources}) => {
           stamina: stamina + 1
         }))
       }
-    }, 1000)
+    }, 2000)
 
     return () => clearInterval(staminaInterval)
   }, [stamina])
@@ -36,29 +36,10 @@ const Resources = ({setResources}) => {
           mana: mana + 1
         }))
       }
-    }, 1000)
+    }, 2000)
 
     return () => clearInterval(manaInterval)
   }, [mana])
-
-  // // if (stamina < 100) {
-  //   setInterval(() => {
-  //     setResources(prevResources => ({
-  //       ...prevResources,
-  //       stamina: stamina + 1
-  //     }))
-  //   }, 3000)
-  // }
-
-  // while (mana < 100) {
-  //   setInterval(() => {
-  //     setResources(prevResources => ({
-  //       ...prevResources,
-  //       mana: mana + 1
-  //     }))
-  //   }, 3000)
-  // }
-  
 
   return (
     <div className='resources-container'>
