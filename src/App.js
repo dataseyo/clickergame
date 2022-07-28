@@ -9,8 +9,10 @@ import Navbar from './components/navbar/navbar';
 import StatsContext from './context/StatsContext';
 import ResourcesContext from './context/ResourcesContext';
 
+import useLocalStorage from './hooks/useLocalStorage';
+
 function App() {
-  const [stats, setStats] = useState({
+  const [stats, setStats] = useLocalStorage('stats', {
     health: 100,
     strength: 10,
     magic: 10,
@@ -18,7 +20,7 @@ function App() {
     level: 1
   })
 
-  const [resources, setResources] = useState({
+  const [resources, setResources] = useLocalStorage('resources', {
     stamina: 100,
     mana: 100
   })
