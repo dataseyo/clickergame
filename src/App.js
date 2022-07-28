@@ -30,17 +30,35 @@ function App() {
 
   // stats modal state
   const [openStats, setOpenStats] = useState(false)
-  
+
+  // settings modal state
+  const [openSettings, setOpenSettings] = useState(false)
 
   return (
     <StatsContext.Provider value={stats}>
     <ResourcesContext.Provider value={resources}>
       <BreakpointProvider>
         <div className="App">
-          <Navbar openInfo={openInfo} setOpenInfo={setOpenInfo} openStats={openStats} setOpenStats={setOpenStats}/>
+          <Navbar 
+            openInfo={openInfo} setOpenInfo={setOpenInfo} 
+            openStats={openStats} setOpenStats={setOpenStats}
+            openSettings={openSettings} setOpenSettings={setOpenSettings}
+          />
           <Routes>
-            <Route path="/clickergame" element={<Home stats={stats} setStats={setStats} setResources={setResources}/>} />
-            <Route path="/stats" element={<Stats stats={stats} setStats={setStats}/>} />
+            <Route 
+              path="/clickergame" 
+              element={
+                <Home 
+                  stats={stats} setStats={setStats} setResources={setResources}
+                  openInfo={openInfo} setOpenInfo={setOpenInfo} 
+                  openStats={openStats} setOpenStats={setOpenStats}
+                  openSettings={openSettings} setOpenSettings={setOpenSettings}
+              />} 
+            />
+            <Route 
+              path="/stats" 
+              element={<Stats stats={stats} setStats={setStats}/>} 
+            />
           </Routes>
         </div>
       </BreakpointProvider>

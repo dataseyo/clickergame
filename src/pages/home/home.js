@@ -9,8 +9,11 @@ import Quests from './quests/quests'
 import Train from './train/train'
 import MobileMenu from './mobile-menu/MobileMenu'
 import CollapsableDiv from '../../components/collapsable-div/CollapsableDiv'
+import StatsModal from '../../components/nav-modals/StatsModal'
+import InfoModal from '../../components/nav-modals/InfoModal'
+import SettingsModal from '../../components/nav-modals/SettingsModal'
 
-const Home = ({stats, setStats, setResources}) => {
+const Home = ({setStats, setResources, openInfo, setOpenInfo, openStats, setOpenStats, openSettings, setOpenSettings}) => {
   // consume stats context and destructure the variables
   const userStats = useContext(StatsContext)
   const {health, strength, magic, experience, level} = userStats
@@ -47,11 +50,12 @@ const Home = ({stats, setStats, setResources}) => {
         <CollapsableDiv title={"Train"} children={<Train setResources={setResources}/>}/>
         <CollapsableDiv title={"Quests"} children={<Quests/>}/>
         <CollapsableDiv title={"Upgrades"} children={<Upgrades/>} />
-        
-        {/* {value === 0 ? <Quests mobile={true}/> : null}
-        {value === 1 ? <Upgrades mobile={true}/> : null}
-        <MobileMenu value={value} onChange={onChange}/> */}
+        <InfoModal openInfo={openInfo} setOpenInfo={setOpenInfo} />
+      <StatsModal openStats={openStats} setOpenStats={setOpenStats}/>
+      <SettingsModal openSettings={openSettings} setOpenSettings={setOpenSettings}/>
       </Breakpoint>
+
+   
     </section>
   )
 }
