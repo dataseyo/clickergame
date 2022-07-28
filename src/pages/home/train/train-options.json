@@ -10,19 +10,60 @@
             {
                 "id" : 2,
                 "text" : "Your muscles need rest. Take a break! -1 to strength.",
-                "weight": 1,
+                "weight": 3,
                 "strength_change" : -1
+            },
+            {
+                "id" : 3,
+                "text" : "You drink a magical protein smoothie. +1 to strength.",
+                "weight": 4,
+                "strength_change" : 1
+            },
+            {
+                "id" : 4,
+                "text" : "You tear your bicep. -2 to strength.",
+                "weight": 1,
+                "strength_change" : -2
+            },
+            {
+                "id" : 5,
+                "text" : "A body reinforcement mage casts a hardening spell on you. +1 to strength.",
+                "weight": 2,
+                "strength_change" : 1
+            },
+            {
+                "id" : 6,
+                "text" : "You skip the gym, watching the latest episode of Witches Gone Wild instead. +0 to strength.",
+                "weight": 3,
+                "strength_change" : 0
             }
         ]
     },
 
     "study" : {
         "outcomes" : [
-            
+            {
+                "id" : 1,
+                "text" : "You read a textbook. +1 to magic.",
+                "weight" : 7,
+                "magic_change" : 1
+            },
+            {
+                "id": 2,
+                "text" : "Procrastination wins. +0 to magic.",
+                "weight" : 5,
+                "magic_change" : 0
+            },
+            {
+                "id": 3,
+                "text" : "You find a cheap fire magician tutor. +1 to magic.",
+                "weight" : 8,
+                "magic_change" : 1
+            }
         ]
     },
 
-    "Adventure" : {
+    "adventure" : {
         "outcomes" : [
             
         ]

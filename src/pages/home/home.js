@@ -10,7 +10,7 @@ import Train from './train/train'
 import MobileMenu from './mobile-menu/MobileMenu'
 import CollapsableDiv from '../../components/collapsable-div/CollapsableDiv'
 
-const Home = ({stats, setStats}) => {
+const Home = ({stats, setStats, setResources}) => {
   // consume stats context and destructure the variables
   const userStats = useContext(StatsContext)
   const {health, strength, magic, experience, level} = userStats
@@ -32,9 +32,9 @@ const Home = ({stats, setStats}) => {
       <Breakpoint medium up className='breakpoint-medium'>
         <div className='home-desktop'>
           
-          <Game setStats={setStats}/>
+          <Game setStats={setStats} setResources={setResources}/>
           <div className='home-sub-container'>
-            <CollapsableDiv title={"Train"} children={<Train/>}/>
+            <CollapsableDiv title={"Train"} children={<Train setResources={setResources}/>}/>
             <CollapsableDiv title={"Quests"} children={<Quests/>}/>
             <CollapsableDiv title={"Upgrades"} children={<Upgrades/>} />
           </div>
@@ -43,8 +43,8 @@ const Home = ({stats, setStats}) => {
 
       {/* mobile */}
       <Breakpoint small down>
-        <Game setStats={setStats}/>
-        <CollapsableDiv title={"Train"} children={<Train/>}/>
+        <Game setStats={setStats} setResources={setResources}/>
+        <CollapsableDiv title={"Train"} children={<Train setResources={setResources}/>}/>
         <CollapsableDiv title={"Quests"} children={<Quests/>}/>
         <CollapsableDiv title={"Upgrades"} children={<Upgrades/>} />
         

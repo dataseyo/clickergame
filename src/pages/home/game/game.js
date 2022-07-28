@@ -9,7 +9,7 @@ import attack from '../../../assets/attack.png'
 import Resources from './resources/resources'
 import PlusGenerator from './plus-generator/PlusGenerator'
 
-const Game = ({setStats}) => {
+const Game = ({setStats, setResources}) => {
     // resource state
     const [knowledge, setKnowledge] = useState(100)
     const [stamina, setStamina] = useState(100)
@@ -60,7 +60,7 @@ const Game = ({setStats}) => {
         <div className='game-clickable-area' onClick={() => clickAnimation()}>
             {/* <Parallax /> */}
             <StatScreen/>
-            <Resources />
+            <Resources setResources={setResources}/>
             <SpriteAnimator
                 width={200}
                 height={190}

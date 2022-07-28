@@ -6,9 +6,9 @@
 :root {
   background-color: black;
 
-  /* stamina and knowledge  */
-  --stamina: 100;
-  --knowledge: 100;
+  /* stamina and mana  */
+  --stamina: 20%;
+  --mana: 100%;
 }
 
 

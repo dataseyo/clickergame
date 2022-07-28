@@ -6,27 +6,34 @@
     align-items: center;
 }
 
+.resources-flex-start {
+    width: 70%;
+}
+
 .stamina {
     background-color: green;
     height: 18px;
-    width: 300px;
+    width: var(--stamina);
     border-radius: 5px;
     margin-bottom: 3px;
     justify-content: center;
     align-items: center;
+    border: 1px solid grey;
 }
 
 
-.knowledge {
+.mana {
     background-color: blue;
     height: 18px;
-    width: 300px;
+    width: var(--mana);
     border-radius: 5px;
     justify-content: center;
     align-items: center;
+    border: 1px solid grey;
 }
 
+
 .resources-text {
+    position: absolute;
     color: white;
-    align-self: center;
 }
