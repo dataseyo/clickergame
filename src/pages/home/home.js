@@ -37,7 +37,7 @@ const Home = ({setStats, setResources, openInfo, setOpenInfo, openStats, setOpen
           
           <Game setStats={setStats} setResources={setResources}/>
           <div className='home-sub-container'>
-            <CollapsableDiv title={"Train"} children={<Train setResources={setResources}/>}/>
+            <CollapsableDiv title={"Train"} children={<Train setResources={setResources} setStats={setStats}/>}/>
             <CollapsableDiv title={"Quests"} children={<Quests/>}/>
             <CollapsableDiv title={"Upgrades"} children={<Upgrades/>} />
           </div>
@@ -47,7 +47,7 @@ const Home = ({setStats, setResources, openInfo, setOpenInfo, openStats, setOpen
       {/* mobile */}
       <Breakpoint small down>
         <Game setStats={setStats} setResources={setResources}/>
-        <CollapsableDiv title={"Train"} children={<Train setResources={setResources}/>}/>
+        <CollapsableDiv title={"Train"} children={<Train setResources={setResources} setStats={setStats}/>}/>
         <CollapsableDiv title={"Quests"} children={<Quests/>}/>
         <CollapsableDiv title={"Upgrades"} children={<Upgrades/>} />
         <InfoModal openInfo={openInfo} setOpenInfo={setOpenInfo} />

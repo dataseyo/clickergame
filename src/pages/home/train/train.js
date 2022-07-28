@@ -3,9 +3,11 @@ import React, {useContext, useState} from 'react'
 import './styles.css'
 import trainData from "./train-options.json"
 import ResourcesContext from '../../../context/ResourcesContext'
+import StatsContext from '../../../context/StatsContext'
 
-const Train = ({setResources}) => {
+const Train = ({setResources, setStats}) => {
   const {stamina, mana} = useContext(ResourcesContext)
+  const {strength, magic} = useContext(StatsContext)
 
   // outcome state
   const [outcome, setOutcome] = useState()
@@ -26,7 +28,7 @@ const Train = ({setResources}) => {
       if (weights[i] > random)
           break;
     
-    return outcomes[i].text;
+    return outcomes[i];
   } 
 
   const onClick = (event) => {
@@ -42,22 +44,35 @@ const Train = ({setResources}) => {
         setOutcome(selectedOutcome)
         console.log(selectedOutcome)
 
+        // update resources and stats
         setResources(prevResources => ({
           ...prevResources, 
           stamina: stamina - 10
+        }))
+
+        setStats(prevStats => ({
+          ...prevStats, 
+          strength: strength + selectedOutcome.strength_change
         }))
       } else {
         console.log("stamina too low")
       }
     } else if (event.target.name === 'study') {
       if (mana > 0) {
+        //  select outcome from train data and set outcome state
         var selectedOutcome = weightedChoice(studyOutcomes)
         setOutcome(selectedOutcome)
         console.log(selectedOutcome)
 
+        // update resources and stats
         setResources(prevResources => ({
           ...prevResources, 
           mana: mana - 10
+        }))
+
+        setStats(prevStats => ({
+          ...prevStats, 
+          magic: magic + selectedOutcome.magic_change
         }))
       } else {
         console.log("mana too low")
@@ -112,7 +127,7 @@ const Train = ({setResources}) => {
       </div>
 
       <div className className='train-outcome-container'>
-        {outcome != null ? <p className='train-text'>{JSON.stringify(outcome)}</p> : null} 
+        {outcome != null ? <p className='train-text'>{JSON.stringify(outcome.text)}</p> : null} 
       </div>
     </div>
   )

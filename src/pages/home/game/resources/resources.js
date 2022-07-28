@@ -13,6 +13,52 @@ const Resources = ({setResources}) => {
     document.documentElement.style.setProperty('--mana', `${mana}%`)
 
   }, [stamina, mana])
+  
+  // replenish resources if they're lower than 100, every few seconds
+  useEffect(() => {
+    const staminaInterval = setInterval(() => {
+      if (stamina < 100) {
+        setResources(prevResources => ({
+          ...prevResources,
+          stamina: stamina + 1
+        }))
+      }
+    }, 1000)
+
+    return () => clearInterval(staminaInterval)
+  }, [stamina])
+
+  useEffect(() => {
+    const manaInterval = setInterval(() => {
+      if (mana < 100) {
+        setResources(prevResources => ({
+          ...prevResources,
+          mana: mana + 1
+        }))
+      }
+    }, 1000)
+
+    return () => clearInterval(manaInterval)
+  }, [mana])
+
+  // // if (stamina < 100) {
+  //   setInterval(() => {
+  //     setResources(prevResources => ({
+  //       ...prevResources,
+  //       stamina: stamina + 1
+  //     }))
+  //   }, 3000)
+  // }
+
+  // while (mana < 100) {
+  //   setInterval(() => {
+  //     setResources(prevResources => ({
+  //       ...prevResources,
+  //       mana: mana + 1
+  //     }))
+  //   }, 3000)
+  // }
+  
 
   return (
     <div className='resources-container'>

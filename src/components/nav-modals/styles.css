@@ -1,17 +1,41 @@
 .stats-modal {
-    height: 100px;
-    width: 100px;
+    height: 200px;
+    width: 200px;
     background-color: white;
+    outline: none;
+
+    position: fixed;
+    top: 30px;
+    right: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 .info-modal {
-    height: 100px;
-    width: 100px;
+    height: 200px;
+    width: 200px;
     background-color: white;
+    outline: none;
+
+    position: fixed;
+    top: 30px;
+    right: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 .settings-modal {
-    height: 100px;
-    width: 100px;
+    height: 200px;
+    width: 200px;
     background-color: white;
+    outline: none;
+
+    position: fixed;
+    top: 30px;
+    right: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 5px;
 }
