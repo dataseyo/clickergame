@@ -79,7 +79,15 @@ const Train = ({setResources, setStats}) => {
       }
     } else if (event.target.name === 'adventure') {
       if (stamina >= 10) {
+        //  select outcome from train data and set outcome state
+        var selectedOutcome = weightedChoice(adventureOutcomes)
+        setOutcome(selectedOutcome)
+        console.log(selectedOutcome)
 
+        setResources(prevResources => ({
+          ...prevResources, 
+          stamina: stamina - 10
+        }))
       } else {
         console.log("stamina too low")
       }

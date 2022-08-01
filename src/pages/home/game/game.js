@@ -8,7 +8,8 @@ import hero from '../../../assets/hero.png'
 import attack from '../../../assets/attack.png'
 import Resources from './resources/resources'
 import PlusGenerator from './plus-generator/PlusGenerator'
-import Sprite from '../../../components/sprite-animator/SpriteAnimator'
+
+import Tiles from '../../../components/tiles/tiles'
 
 const Game = ({setStats, setResources}) => {
     // sprite state
@@ -79,7 +80,6 @@ const Game = ({setStats, setResources}) => {
                 onEnd={() => setSprite(hero)}
             />
 
-            {/* <Sprite /> */}
             {/* <PlusGenerator generatePlus={generatePlus} PlusInstance={PlusInstance} setPlusses={setPlusses}>
             </PlusGenerator> */}
         </div>

@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { Breakpoint } from 'react-socks'
+import { Outlet } from 'react-router-dom'
 
 import './styles.css'
 import StatsContext from '../../context/StatsContext'
@@ -61,7 +62,8 @@ const Home = ({setStats, setResources, openInfo, setOpenInfo, openStats, setOpen
         <BestiaryModal openBestiary={openBestiary} setOpenBestiary={setOpenBestiary}/>
       </Breakpoint>
 
-   
+
+
     </section>
   )
 }

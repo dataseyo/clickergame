@@ -10,13 +10,22 @@
 
 @media screen and (min-width: 768px) {
     .quests-container {
-        max-height: 100%;
+        max-height: 33vh;
     }
 }
-
 
 .quests-title {
     color: white;
     padding: 10px;
 }
 
+.quest {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 10px;
+    height: 100px;
+    width: auto;
+    margin: 10px;
+    background-color: white;
+    cursor: pointer;
+}

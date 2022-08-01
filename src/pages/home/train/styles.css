@@ -6,6 +6,12 @@
     align-items: center;
 }
 
+@media screen and (min-width: 768px) {
+    .train-container {
+        max-height: 33vh;
+    }
+}
+
 .train-buttons-container {
     display: grid;
     grid-template-columns: 120px 120px;

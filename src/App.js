@@ -10,6 +10,8 @@ import StatsContext from './context/StatsContext';
 import ResourcesContext from './context/ResourcesContext';
 
 import useLocalStorage from './hooks/useLocalStorage';
+import QuestInstance from './pages/home/quests/quest-instance/QuestInstance';
+import QuestOverview from './pages/home/quests/quest-overview/QuestOverview';
 
 function App() {
   const [stats, setStats] = useLocalStorage('stats', {
@@ -63,8 +65,13 @@ function App() {
                   openStats={openStats} setOpenStats={setOpenStats}
                   openSettings={openSettings} setOpenSettings={setOpenSettings}
                   openBestiary={openBestiary} setOpenBestiary={setOpenBestiary}
-              />} 
-            />
+              />}> 
+              <Route index element={<QuestOverview/>}/>
+              <Route path='ruins' element={<QuestInstance name="ruins"/>}/>
+              <Route path='wilderness' element={<QuestInstance name="wilderness"/>}/>
+              <Route path='swamp' element={<QuestInstance name="swamp"/>}/>
+              <Route path='temple' element={<QuestInstance name="temple"/>}/>
+            </Route>
             <Route 
               path="/stats" 
               element={<Stats stats={stats} setStats={setStats}/>} 

@@ -65,13 +65,27 @@
 
     "adventure" : {
         "outcomes" : [
-            
+            {
+                "id" : 1,
+                "text" : "You enter a dungeon. The monsters have all been slain already.",
+                "weight" : 3
+            },
+            {
+                "id" : 2,
+                "text" : "You enter a dungeon. The resident goblins are no match for your cooking pan.",
+                "weight" : 7
+            }
         ]
     }, 
 
     "???" : {
         "outcomes" : [
-            
+            {
+                "id" : 1,
+                "text" : "You read a textbook. +1 to magic.",
+                "weight" : 7,
+                "magic_change" : 1
+            }
         ]
     }
 }

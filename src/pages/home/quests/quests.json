@@ -1,0 +1,32 @@
+{
+    "zones" : [
+        {
+            "id" : 1,
+            "name" : "city ruins",
+            "location": "/images/city2.png",
+            "nav" : "/clickergame/ruins"
+        },
+        
+        {
+            "id" : 2,
+            "name" : "wilderness",
+            "location" : "/images/mountains.png",
+            "nav" : "/clickergame/wilderness"
+        },
+
+        {
+            "id" : 3,
+            "name" : "swamp",
+            "location": "/images/city2.png",
+            "nav" : "/clickergame/swamp"
+        },
+
+        {
+            "id" : 4,
+            "name" : "corrupt temple",
+            "location": "/images/city2.png",
+            "nav" : "/clickergame/temple"
+        }
+    ]
+}
+

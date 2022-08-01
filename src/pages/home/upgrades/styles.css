@@ -10,7 +10,7 @@
 
 @media screen and (min-width: 768px) {
     .upgrades-container {
-        max-height: 100%;
+        max-height: 33vh;
     }
 }
 

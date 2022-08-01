@@ -1,5 +1,5 @@
 .stats-modal {
-    height: 50vh;
+    height: 60vh;
     width: 60vw;
     background-color: white;
     outline: none;
@@ -13,7 +13,7 @@
 }
 
 .info-modal {
-    height: 50vh;
+    height: 60vh;
     width: 60vw;
     background-color: white;
     outline: none;
@@ -28,7 +28,7 @@
 }
 
 .settings-modal {
-    height: 50vh;
+    height: 60vh;
     width: 60vw;
     background-color: white;
     outline: none;

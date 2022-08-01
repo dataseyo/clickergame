@@ -35,12 +35,19 @@ const InfoModal = ({openInfo, setOpenInfo}) => {
 
         <hr/>
 
+        {/* <h4>Clicking</h4>
+          <p className='modal-text'>
+            Attacking with your hero gains you experience slowly, and... 
+          </p>
+
+        <hr/> */}
+
 
         <div>
           <div>
           <h4>Train</h4>
           <p className='modal-text'>
-            Increase your strength and magic. But be careful, sometimes it might decrease them.
+            Increase your strength and magic. But be careful, accidents happen.
           </p>
 
           <h4>Quests</h4>
