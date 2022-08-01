@@ -1,10 +1,8 @@
 import React from 'react'
-import { BrowserRouter, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 import './styles.css'
-
 import data from '../quests.json'
-import city from '../../../../assets/city.png'
 
 const QuestOverview = () => {
     const navigate = useNavigate()
@@ -20,7 +18,7 @@ const QuestOverview = () => {
                 style={{backgroundImage: `url(${process.env.PUBLIC_URL + item.location})`}}
                 onClick={() => navigate(`${item.nav}`)}
               >
-                <p>{item.name}</p>
+                <h3>{item.name}</h3>
               </div>
               
             )

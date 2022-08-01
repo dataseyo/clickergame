@@ -69,8 +69,8 @@ function App() {
               <Route index element={<QuestOverview/>}/>
               <Route path='ruins' element={<QuestInstance name="ruins"/>}/>
               <Route path='wilderness' element={<QuestInstance name="wilderness"/>}/>
-              <Route path='swamp' element={<QuestInstance name="swamp"/>}/>
-              <Route path='temple' element={<QuestInstance name="temple"/>}/>
+              <Route path='forest' element={<QuestInstance name="forest"/>}/>
+              <Route path='desert' element={<QuestInstance name="desert"/>}/>
             </Route>
             <Route 
               path="/stats" 

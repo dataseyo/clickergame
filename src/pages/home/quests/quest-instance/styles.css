@@ -1,3 +1,10 @@
+.quest-instance-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+    justify-content: space-between;
+}
+
 .quest-instance-text {
     color: white;
 }

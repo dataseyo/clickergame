@@ -8,7 +8,7 @@ const QuestInstance = (props) => {
 
   return (
     <div className='quest-instance-container'>
-        <p className='quest-instance-text'>QuestInstance {props.name}</p>
+        <h3 className='quest-instance-text'>{props.name}</h3>
         <button onClick={() => navigate('/clickergame')}>Back To Quests</button>
     </div>
   )
