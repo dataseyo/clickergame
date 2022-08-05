@@ -1,0 +1,16 @@
+.quest-grid {
+    display: grid;
+    grid-template-columns: 80px 80px 80px 80px;
+    align-items: center;
+    justify-content: center;
+}
+
+.quest-grid-item {
+    height: 50px;
+    width: 80px;
+    background-color: grey;
+    outline: 1px solid black;
+    justify-content: center;
+    align-items: center;
+}
+

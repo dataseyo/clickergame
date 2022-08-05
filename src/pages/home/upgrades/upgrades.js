@@ -1,6 +1,8 @@
 import React from 'react'
+import { Table, Cell,  } from '@mui/material'
 
 import './styles.css'
+import UpgradeRow from './upgrade-row/UpgradeRow'
 
 const data = [
   { id: 1, cost: 10, text: "increase health"},

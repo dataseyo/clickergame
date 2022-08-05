@@ -3,8 +3,27 @@
     flex-direction: column;
     min-height: 200px;
     justify-content: space-between;
+    align-items: center;
+}
+
+.quest-instance-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .quest-instance-text {
+    flex: 2;
     color: white;
+}
+
+.quest-instance-icon {
+    align-self: flex-end;
+    margin: 4px;
+    color: red;
+    flex: 1;
+}
+
+.quest-button-text {
+    margin: 2px;
 }

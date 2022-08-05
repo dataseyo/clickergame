@@ -25,3 +25,7 @@
     padding: 4px;
     user-select: none;
 }
+
+.collapsable-div {
+    max-height: 250px;
+}

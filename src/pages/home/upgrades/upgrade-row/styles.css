@@ -1,0 +1,4 @@
+.upgrade-row-container {
+    display: flex;
+    flex-direction: row;
+}

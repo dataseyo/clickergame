@@ -4,6 +4,9 @@
     border: 1px solid white;
     justify-content: space-between;
     align-items: center;
+    max-height: 250px;
+    overflow-y: auto;
+
 }
 
 @media screen and (min-width: 768px) {

@@ -1,0 +1,31 @@
+.quests-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border: 1px solid white;
+    overflow-y: auto;
+    z-index: 1;
+    min-height: 200px;
+}
+
+@media screen and (min-width: 768px) {
+    .quests-container {
+        max-height: 33vh;
+    }
+}
+
+.quests-title {
+    color: white;
+    padding: 10px;
+}
+
+.quest {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 10px;
+    height: 100px;
+    width: auto;
+    margin: 10px;
+    background-color: white;
+    cursor: pointer;
+}
