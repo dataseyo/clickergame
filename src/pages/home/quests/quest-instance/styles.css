@@ -9,19 +9,20 @@
 .quest-instance-header {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .quest-instance-text {
-    flex: 2;
     color: white;
+    margin: 4px;
 }
 
 .quest-instance-icon {
     align-self: flex-end;
     margin: 4px;
     color: red;
-    flex: 1;
+    cursor: pointer;
 }
 
 .quest-button-text {

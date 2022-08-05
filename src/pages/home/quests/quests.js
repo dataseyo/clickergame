@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, useNavigate, Outlet } from 'react-router-dom'
+import { useNavigate, Outlet } from 'react-router-dom'
 
 import './styles.css'
 import data from './quests.json'

@@ -14,17 +14,27 @@ const QuestGrid = () => {
 
     const [gridLocation, setGridLocation] = useState(13)
     const [monsterLocation, setMonsterLocation] = useState(1)
+    const [bossLocation, setBossLocation] = useState(2)
 
     useEffect(() => {
         // randomize monster locations
-        const randInt = Math.floor(Math.random() * grid.length)
-        setMonsterLocation(grid[randInt])
+        var randInt1 = 1;
+        var randInt2 = 1;
+        
+        randInt1 = Math.floor(Math.random() * grid.length - 1)
+        setMonsterLocation(grid[randInt1])
+
+        // generate a second different random number
+        while (randInt1 == randInt2) {
+            randInt2 = Math.floor(Math.random() * grid.length - 1)
+        }
+
+        setBossLocation(grid[randInt2])
     }, [])
     
     const onMove = (event) => {
         var name = event.target.getAttribute('name')
         setGridLocation(name)
-        console.log(name)
     }
 
   return (
@@ -62,7 +72,16 @@ const QuestGrid = () => {
                         :
                         null
                     }
+
+                    {index == bossLocation ? 
+                        <p>Boss</p>
+                        :
+                        null
+                    }
                     </div>
+
+                    
+    
                     
                 )
             })

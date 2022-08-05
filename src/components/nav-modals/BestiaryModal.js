@@ -3,6 +3,25 @@ import { Modal } from '@mui/material'
 
 import './styles.css'
 
+const BestiaryGrid = () => {
+    const grid = []
+    for (var i = 1; i < 31; i++) {
+        grid.push(i)
+    }
+
+    return (
+        <div className='bestiary-grid'>
+            {grid.map(item => {
+                return (
+                    <div className='bestiary-grid-item'>
+                        
+                    </div>
+                )
+            })}
+        </div>
+    )
+}
+
 const BestiaryModal = ({openBestiary, setOpenBestiary}) => {
   const handleClose = () => setOpenBestiary(false);
 
@@ -18,7 +37,7 @@ const BestiaryModal = ({openBestiary, setOpenBestiary}) => {
             and display beast if user has 
         */}
 
-
+        <BestiaryGrid />
       </div>
     </Modal>
   )

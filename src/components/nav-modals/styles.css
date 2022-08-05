@@ -69,3 +69,18 @@
 .modal-text {
     padding: 2px;
 }
+
+.bestiary-grid {
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px 50px;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.bestiary-grid-item {
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+}
